@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passing Grade Checker</title>
+</head>
+<body>
+    <h1>Passing Grade Checker</h1>
+    <label for="score">Masukkan Nilai Siswa:</label>
+    <input type="number" id="score" name="score">
+    <button onclick="checkPassingGrade()">Cek Hasil</button>
+    <p id="result"></p>
+
+    <script>
+        function checkPassingGrade() {
+            var score = document.getElementById("score").value;
+            var result = "";
+            
+            if (score >= 75) {
+                result = "Lulus";
+            } else {
+                result = "Tidak Lulus";
+            }
+            
+            document.getElementById("result").innerText = "Hasil: " + result;
+        }
+    </script>
+</body>
+<footer>© M.Ibnu Rafi</footer>
+</html>
